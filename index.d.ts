@@ -22,9 +22,9 @@
  * SOFTWARE.
  */
 
-import React, { ReactNode } from "react";
-import { StyleProp, ViewStyle, ModalProps } from "react-native";
-import { WebViewProps } from "react-native-webview";
+import React, {ReactNode} from 'react';
+import {ModalProps, StyleProp, ViewStyle} from 'react-native';
+import {WebViewProps} from 'react-native-webview';
 
 export declare type RecaptchaProps = {
     headerComponent?: ReactNode;
@@ -44,6 +44,7 @@ export declare type RecaptchaProps = {
     lang?: string;
     style?: StyleProp<ViewStyle>;
     enterprise?: boolean;
+    onDismiss?: () => void;
 };
 
 export declare type RecaptchaHandles = {
@@ -51,8 +52,6 @@ export declare type RecaptchaHandles = {
     close(): void;
 };
 
-declare const Recaptcha: React.ForwardRefExoticComponent<
-    RecaptchaProps & React.RefAttributes<RecaptchaHandles>
->;
+declare const Recaptcha: React.ForwardRefExoticComponent<RecaptchaProps & React.RefAttributes<RecaptchaHandles>>;
 
 export default Recaptcha;
