@@ -244,6 +244,7 @@ const Recaptcha = forwardRef(
           style={webViewStyles}
           onMessage={handleMessage}
           ref={$webView}
+          textZoom={100}
         />
         {footerComponent}
         {renderLoading()}
